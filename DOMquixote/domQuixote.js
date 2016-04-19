@@ -1,6 +1,6 @@
 (function (root) {
 
-  root.$l = function (selector) {
+  root.$q = function (selector) {
 
     if (typeof selector === "object" && selector instanceof "HTMLElement") {
       return new DOMNodeCollection([selector]);
@@ -83,18 +83,27 @@
   };
 
   DOMNodeCollection.prototype.find = function (selector) {
-    // debugger
     for (var i = 0; i < this._htmlEls.length; i++) {
       return this._htmlEls[i].querySelectorAll(selector);
     }
   };
 
   DOMNodeCollection.prototype.remove = function () {
-
     for (var i = 0; i < this.children().length; i++) {
       this.removeChild(this.children()[i]);
     }
   };
 
+  DOMNodeCollection.prototype.on = function (trigger, listener) {
+    for (var i = 0; i < this.array.length; i++) {
+      this.array[i].addEventListener(trigger, listener);
+    }
+  };
+
+  DOMNodeCollection.prototype.off = function (trigger, listener) {
+    for (var i = 0; i < this.array.length; i++) {
+      this.array[i].removeEventListener(trigger, listener);
+    }
+  };
 
 })(this);

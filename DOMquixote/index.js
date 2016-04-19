@@ -1,12 +1,12 @@
-var header = $l("h1");
+var header = $q("h1");
 
 header.append(", a big island.");
 
-var mainDiv = $l("div");
+var mainDiv = $q("div");
 
 var parent = header.parent();
 
 parent.removeClass("green");
 
-var list = $l("ul");
+var list = $q("ul");
 list.remove();
