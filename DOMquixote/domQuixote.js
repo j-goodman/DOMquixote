@@ -95,14 +95,14 @@
   };
 
   DOMNodeCollection.prototype.on = function (trigger, listener) {
-    for (var i = 0; i < this.array.length; i++) {
-      this.array[i].addEventListener(trigger, listener);
+    for (var i = 0; i < this._htmlEls.length; i++) {
+      this._htmlEls[i].addEventListener(trigger, listener);
     }
   };
 
   DOMNodeCollection.prototype.off = function (trigger, listener) {
-    for (var i = 0; i < this.array.length; i++) {
-      this.array[i].removeEventListener(trigger, listener);
+    for (var i = 0; i < this._htmlEls.length; i++) {
+      this._htmlEls[i].removeEventListener(trigger, listener);
     }
   };
 
