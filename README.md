@@ -1,9 +1,7 @@
 # DOMquixote #
 DOMquixote is a library for traversing HTML documents with JavaScript.
 
-<div style="text-align:center" markdown="1">
-![Alt Text](http://i.imgur.com/ElS3MXy.png)
-</div>
+!(http://i.imgur.com/ElS3MXy.png)
 
 ## Features ##
 * Element selection
